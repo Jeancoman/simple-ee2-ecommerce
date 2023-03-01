@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
+    row-gap: 50px;
+    font-family: Roboto;
+    margin: auto;
+    background-color: #F6F9FC;
+}
+
+.logo img {
+    width: 200px;
+    height: 80px;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 10px;
+}
+
+.header {
+    background-color: rgb(250, 230, 0);
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 202px 200px 50px 50px;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+}
+
+.product {
+    border: 1px solid rgb(230, 230, 230);
+    background-color: white;
+    height: 400px;
+    width: 280px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 2fr 1px 1fr 1fr;
+    place-items: center;
+    margin: auto;
+    box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.34);
+    -webkit-box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.34);
+}
+
+.product hr {
+    height: 1px;
+    width: 100%;
+    border: 0;
+    background-color: rgb(230, 230, 230);
+}
+
+.product-info {
+    overflow-wrap: break-word;
+    height: 76px;
+    width: 280px;
+    display: grid;
+    gap: 15px;
+    padding: 20px 30px;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.product-button {
+    height: 48px;
+    width: 230px;
+    font-weight: 700;
+    background-color:  #40a3d8;
+    color: white;
+    padding: 14px 52px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    place-self: center;
+    font-size: 17px;
+    text-decoration: none
+}
+
+.product-button:hover {
+    background-color: #2990c8
+}
+
+.product-name {
+
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 270px 270px 270px;
+    place-content: center;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.shopping-cart {
+    margin-left: 700px;
+    position: relative;
+}
+
+.shopping-cart img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(217deg) brightness(105%) contrast(101%);
+}
+
+.cantidad {
+    height: 27px;
+    width: 29px;
+    position: absolute;
+    left: -20px;
+    bottom: -10px;
+    border-radius: 100%;
+    padding: 4px 10px;
+    color: #40a3d8;
+    font-weight: 700;
+    background-color: white;
+}
+
+.cart-container {
+    width: 1200px;
+    margin: auto;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 25px;
+
+}
+
+.static-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    font-weight: 700;
+    place-items: center;
+    font-size: 18px
+
+}
+
+.product-col {
+    justify-self: start;
+
+}
+
+.precio-col {
+
+}
+
+.cantidad-col {
+
+}
+
+.total-col {
+
+}
+
+.row-product img {
+    width: 65px;
+    height: 50px;
+}
+
+.product-img img{
+    object-fit: cover;
+    max-width: unset;
+}
+
+.row-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 540px;
+}
+
+.row-name {
+    text-overflow: elipsis;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.dynamic-row {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 540px 100px 100px 100px 20px;
+    place-items: center;
+}
+
+.cantidad-button {
+    display: grid;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    width: 150px;
+    height: 50px;
+    font-weight: 600;
+    margin-left: 100px
+
+}
+
+.increment , .decrement {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1
+}
+
+.row-cantidad {
+    width: 100px
+}
+
+.row-total {
+    width: 100px;
+    margin-left: 550px
+}
+
+
+
+.text {
+    cursor: default;
+}
+
+
+.item {
+
+}
+
+.row-price {
+    margin-left: -20px;
+
+}
+
+.carrito-total {
+    font-weight: 600
+
+}
+
+.carrito-comprar {
+    margin-top: 30px;
+    margin-left: 5px;
+    display: flex;
+    gap: 30px;
+
+}
+
+.boton-seccion {
+    height: 48px;
+    width: 230px;
+    font-weight: 700;
+    color: white;
+    padding: 14px 30px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    place-self: center;
+    font-size: 17px;
+    text-decoration: none;
+    background-color: rgb(250, 230, 0);
+}
+
+.eliminar {
+    margin-left: 570px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.exito {
+    background-color: #69d500;
+    font-weight: 600;
+    width: max-content;
+    padding: 20px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.exito:hover {
+    background-color: #55ae00;
+}
+
+.error {
+    background-color: #c40000;
+    font-weight: 600;
+    width: max-content;
+    padding: 20px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.error:hover {
+    background-color: #9d0000;
+}
+
+.error, .exito {
+    text-decoration: none;
+}
+
+.mis-compras {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.mis-compras:hover {
+    background-color: rgb(230, 210, 0);
+    border-radius: 10px;
+}
+
+.compras-container {
+    width: 1200px;
+    margin: auto;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 25px;
+
+}
+
+.static-row-compras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    font-weight: 700;
+    place-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+}
+
+.dynamic-row-compras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+.dynamic-row-compras:hover {
+    background-color: rgb(200,200,200);
+}
+
+.cuenta {
+    margin-left: 750px;
+}
+
+.cuenta img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(217deg) brightness(105%) contrast(101%);
+}
+
+.login-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.login-form input {
+    width: 300px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 5px;
+    font-family: "Roboto";
+    font-size: 15px;
+    border: 1px solid rgb(220, 220, 220) ;
+}
+
+.login-form input::placeholder {
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+.login-form button {
+    border-radius: 5px;
+    font-family: "Roboto";
+    border: 0;
+    background-color:  #40a3d8;
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-container a {
+    text-decoration: none;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500
+}
+
+.login-container a:hover {
+    background-color: rgb(200, 200, 200)
+
+}
+
+.login-form button:hover {
+    background-color: #2990c8
+
+}
+
+.registro-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.registro-form input {
+    width: 300px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 5px;
+    font-family: "Roboto";
+    font-size: 15px;
+    border: 1px solid rgb(220, 220, 220) ;
+    outline: none;
+}
+
+.registro-form input:focus {
+    outline: blue;
+}
+
+.registro-form input::placeholder {
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+.registro-form button {
+    border-radius: 5px;
+    font-family: "Roboto";
+    border: 0;
+    background-color:  #40a3d8;
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.registro-form button:hover {
+    background-color: #2990c8
+}
+
+.registro-container {
+
+}
+
+.login-container {
+
+}
+
+.texto-cantidad {
+    margin-left: 165px;
+}
+
+.informacion-general {
+    background-color: white;
+    padding: 20px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.informacion-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center
+}
+
+.informacion-especifica, .informacion-general {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.27);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.27);
+}
+
+.informacion-especifica {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.informacion-container > div > div:first-of-type {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.informacion-container div {
+    text-overflow: ellipsis;
+}
+
+.logout img, .editar img, .eliminar-cuenta img {
+    width: 30px;
+    height: 30px;
+}
+
+.eliminar-cuenta img:hover {
+    filter: invert(8%) sepia(84%) saturate(7439%) hue-rotate(3deg) brightness(99%) contrast(109%);
+}
+
+.logout img:hover {
+    filter: invert(58%) sepia(64%) saturate(487%) hue-rotate(159deg) brightness(89%) contrast(89%);
+}
+
+.editar img:hover {
+    filter: invert(73%) sepia(71%) saturate(2706%) hue-rotate(2deg) brightness(108%) contrast(98%);
+}
+
+.opciones {
+    display: flex;
+    gap: 10px;
+    justify-self: end;
+}
+
+.acciones-cont {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.editar-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.editar-form input {
+    width: 300px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 5px;
+    font-family: "Roboto";
+    font-size: 15px;
+    border: 1px solid rgb(220, 220, 220) ;
+    outline: none;
+}
+
+.editar-form input:focus {
+    outline: blue;
+}
+
+.editar-form input::placeholder {
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+.editar-form button {
+    border-radius: 5px;
+    font-family: "Roboto";
+    border: 0;
+    background-color:  #40a3d8;
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.editar-form button:hover {
+    background-color: #2990c8
+}
